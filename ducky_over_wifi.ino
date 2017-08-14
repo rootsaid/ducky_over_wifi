@@ -1,3 +1,13 @@
+//HID or Human Interface Devices are Devices that takes input from human and pass it on to the device connected to it. 
+//HID devices includes keyboard, joystick, mouse, touch pad, graphic tablet etc. 
+//There is a Library available in arduino which enables MKR1000 to acts as a keyboard and send keystrokes to PC. 
+//We are making use of this library to execute a metasploit reverse shell python code in the victim's machine and gain a reverse shell. 
+//Here, we will be using an Arduino Board, Arduino MKR1000 to integrate wireless network connectivity and perform HID attacks over WiFi
+
+//https://www.youtube.com/c/greenterminal --Here you will find so many penetration testing videos; software as well as hardware level.
+//Support us by subscribing the channel.... Happy Hacking........
+
+
 #include <SPI.h>
 #include <WiFi101.h>
 #include "Keyboard.h"
@@ -55,6 +65,7 @@ void loop() {
             client.println("Content-type:text/html");
             client.println();
             client.print("www.greenterminal.in<br>");
+            client.print("https://www.youtube.com/c/greenterminal<br>");
             client.print("<br>");
             client.print("<h1>Windows<br>");
             client.print("<br>");
